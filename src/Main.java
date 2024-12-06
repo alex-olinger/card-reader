@@ -21,7 +21,7 @@ public class Main {
         CardLoader cardLoader = new CardLoader();
         Deck deck = cardLoader.loadCards();
 
-        
+
         String temp = "temp";
     }
 
