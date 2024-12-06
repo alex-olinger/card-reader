@@ -15,14 +15,14 @@ public class Main {
         Tesseract reader = new Tesseract();
         reader.setDatapath("resources");
         reader.setLanguage("title");
-        File imgFile = new File("resources/cards/card1.jpg");
         Rectangle rect = new Rectangle(55, 55, 400, 35);
 
 
+        CardLoader cardLoader = new CardLoader();
+        Deck deck = cardLoader.loadCards();
 
-        String result = reader.doOCR(imgFile, rect);
+        
         String temp = "temp";
-
     }
 
 }
