@@ -12,14 +12,10 @@ public class Main {
 
     public static void main(String[] args) throws IOException, TesseractException {
 
-        Tesseract reader = new Tesseract();
-        reader.setDatapath("resources");
-        reader.setLanguage("title");
-        Rectangle rect = new Rectangle(55, 55, 400, 35);
-
-
         CardLoader cardLoader = new CardLoader();
         Deck deck = cardLoader.loadCards();
+        deck.runOCROnDeck();
+
 
 
         String temp = "temp";
