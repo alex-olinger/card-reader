@@ -1,4 +1,6 @@
+import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import net.sourceforge.tess4j.*;
 import java.io.*;
@@ -37,7 +39,21 @@ public class Deck {
         }
     }
 
-    public void printToText() {
-        
+    public void outputToTxtFiles() throws IOException {
+        // make 'out' folder
+
+        File directory = new File("out");
+        Files.createDirectory(directory.toPath());
+
+        for (Card card: this.deck) {
+            int extensionIndex = card.getCardFile().getName().lastIndexOf(".");
+            String cardName = card.getCardFile().getName().substring(0, extensionIndex);
+            PrintWriter writer = new PrintWriter(new File("out/" + cardName + ".txt"));
+            String cardContent = card.toString();
+            writer.println(cardContent);
+            writer.close();
+            String temp = "t";
+
+        }
     }
 }

@@ -26,6 +26,10 @@ public class Card {
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return cardTitle + "\n"
+                + "---------------------------------\n\n"
+                + cardBody;
+    }
 }

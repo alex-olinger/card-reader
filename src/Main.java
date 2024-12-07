@@ -15,10 +15,8 @@ public class Main {
         CardLoader cardLoader = new CardLoader();
         Deck deck = cardLoader.loadCards();
         deck.runOCROnDeck();
-
-
-
-        String temp = "temp";
+        deck.outputToTxtFiles();
+        
     }
 
 }
